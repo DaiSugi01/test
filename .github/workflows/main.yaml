@@ -7,18 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: actions/hello-world-composite-action@v4
-        with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
-  hello_world_job2:
-    runs-on: ubuntu-18.04
-    name: A job to say hello2
-    steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./.github/actions/system-test
+        uses: Daisugi01/hello-world-composite-action@v4
         with:
           who-to-greet: "Mona the Octocat"
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
